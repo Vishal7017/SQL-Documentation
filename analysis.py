@@ -27,7 +27,7 @@
 import pandas as pd
 
 # Load the temperature data
-df_temp = pd.read_csv('CIS_500_CE2_MeanTemperature.txt')
+df_temp = pd.read_csv('CIS_500_S24_CE2_MeanTemperature.csv')
 
 # Group the data by 'Year' and 'Month'
 grouped_temp = df_temp.groupby(['Year', 'Month'])
