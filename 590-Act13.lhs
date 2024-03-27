@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------
-This activity submitted by Rohith Damarla (520053890)
-Class student number: 248 
+Name : Vishal Wavhale
+Class student number: 590
 Activity: 13
 ---------------------------------------------------------------------------------------------
 
@@ -8,7 +8,7 @@ Activity: 13
 
 {-
 
-The function floor, denoted as ⌊x⌋, represents the greatest integer less than or equal to a real number x. Formally, for any real number x, the floor function is mathematically defined as:
+Function floor, denoted as ⌊x⌋, represents the greatest integer less than or equal to a real number x. For any real number x, the floor function can be defined as:
 
 floor ⌊x⌋ = max{n∈Z:n<=x}
 
@@ -17,7 +17,7 @@ for example,
 floor ⌊5.6⌋ = 5
 floor ⌊-6.5⌋ = -7
 
-Overall, the floor function is a fundamental mathematical concept with various applications in mathematics, computer science, and engineering. It plays a crucial role in integer and rounding operations, providing a way to obtain integer values from real numbers based on their magnitude relative to the integers.
+Floor function is a fundamental mathematical concept with various applications. It can be crucial for integer and rounding operations, providing a way to obtain integer values from real numbers based on their magnitude relative to the integers.
 
 -}
 
