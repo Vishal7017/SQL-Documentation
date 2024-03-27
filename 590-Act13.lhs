@@ -26,18 +26,15 @@ Floor function is a fundamental mathematical concept with various applications. 
 --Question2: (b)
 
 {-
+ 
+The Haskell code in the file presents two unique strategies for calculating the floor of a floating-point number.
 
-The provided Haskell code in the file "floors.lhs" implements two distinct approaches to compute the floor of a floating-point number.
+The floor1 function employs an iterative process to find the floor value. It first identifies whether a given float, x, is positive or negative. If x is negative, the function uses the 'until' function in tandem with the 'leq' helper function to iteratively decrease from -1 until it locates a value less than or equal to x. Conversely, if x is positive, the function uses the 'until' function and the 'lt' helper function to increment from 1 until it identifies a number greater than x. The function then adjusts the result by subtracting 1 to obtain the correct floor value. This implementation aims to find the largest integer less than or equal to the input float, mirroring the traditional definition of the floor function.
 
+On the other hand, the floor2 function employs a technique similar to binary search to determine the floor value of a float x. It begins with an interval (m, n) established by the 'bound' function. This interval is progressively narrowed down using the 'shrink' function through iterative steps until the interval size becomes 1, signifying the floor value has been found. The 'unit' function checks if the interval size has reduced to 1, while the 'choice' function identifies the interval's midpoint. The function ultimately returns the floor value as the first element of the interval.
 
-In order to determine the floor value, the floor1 function first uses an iterative process. This function determines if a given float, x, is positive or negative. Using the until function in combination with the leq helper function, the function iteratively decreases from -1 if x is negative until it finds a value less than or equal to x. In contrast, the function uses the until function and the lt helper function to increment from 1 until it finds a number bigger than x if x is positive. Next, to get the correct floor value, the result is adjusted by subtracting 1. Finding the largest integer less than or equal to the input float is the goal of this implementation, which closely resembles the floor function's conventional meaning.
+The implementation also comprises several helper functions. 'shrink', 'choose', 'bound', 'lower', and 'upper' manage the interval and binary search operations used in floor2, while 'leq' and 'lt' handle comparison operations used in floor1.
 
-In contrast, the floor2 function uses a method akin to binary search to ascertain a float x's floor value. It starts with the bound function-established interval (m, n). This interval is gradually reduced using the shrink function through iterative stages until the interval size equals 1, indicating the discovery of the floor value. The unit function determines whether the interval size has shrunk to 1, while the choice function determines the interval's midpoint. The floor value is ultimately returned by the function as the interval's first element.
-
-The implementation also includes a number of helper functions, including shrink, choose, bound, lower, and upper for managing the interval and binary search operations used in floor2, and leq and lt for comparison operations used in floor 1.
-
-To sum up, these solutions present differing approaches to managing the floor function, each appropriate for various situations and levels of precision. To quickly ascertain the floor value of a given float number, floor2 uses a more streamlined binary search-like technique than floor1, which uses a linear search strategy with conditional branching.
-
-
+In conclusion, these solutions offer varied methods for handling the floor function, each suitable for different scenarios and precision levels.
 
 -}
